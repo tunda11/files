@@ -6,7 +6,7 @@ using namespace std;
 int main( )
 {
 	ofstream outputFile;
-	outputFile.open("abc.txt");
+	outputFile.open("abc.bin");
    
   
    //create some data
