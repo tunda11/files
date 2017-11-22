@@ -17,10 +17,13 @@ int main( )
    
     if (outputFile)
    {
-	 outputFile << a << " " << b << " " << c << endl;
+	 outputFile.write ( reinterpret_cast<char*>(&a), sizeof (a));
+	 outputFile.write ( reinterpret_cast<char*>(&b), sizeof (b));
+	 outputFile.write ( reinterpret_cast<char*>(&c), sizeof (c));
 	}
- 
-   cout << a << " " << b << " " << c;//display data to console (i.e. as formatted chars)
+ else
+	cout<<"Error opening data.bin";
+   //cout << a << " " << b << " " << c;//display data to console (i.e. as formatted chars)
 	//outputFile << a << " " << b << " " << c << endl;
    cout<<endl<<endl;
  
